@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main(){
-    int choice;
-    float num1,num2,result;
+    int option;
+    float a,b,result;
 
     do
     {
@@ -11,39 +11,39 @@ int main(){
     printf("3.multiplication\n");
     printf("4.Divison\n");
     printf("5.exit\n");
-    printf("Enter your choice:");
-    scanf("%d",&choice);
+    printf("Enter your option:");
+    scanf("%d",& option);
 
     printf("Enter two numbers:");
-    scanf("%f%f",&num1,&num2);
+    scanf("%f%f",&a,&b);
 
-    if(choice==5){
+    if(option==5){
         printf("thank you for using the calculator!\n");
           break;
     }
-    switch(choice){
+    switch(option){
         case 1:
         //addition
-        result = num1+num2;
+        result = a+b;
         printf("result = %.2f\n",result);
         break;
 
         case 2:
         //subtraction
-        result = num1-num2;
+        result = a-b;
         printf("result = %.2f\n",result);
         break;
 
         case 3:
         //multiplication
-        result = num1*num2;
+        result = a*b;
         printf("result = %.2f\n",result);
         break;
 
         case 4:
         //division
-        if(num2!=0){
-        result = num1/num2;
+        if(b!=0){
+        result = a/b;
         printf("result = %.2f\n",result);
         }
         else
@@ -53,8 +53,8 @@ int main(){
         break;
 
         default:
-        printf("invalidchoice/n");
+        printf("invalidoption/n");
     }
-    }while(choice!=5);
+    }while(option!=5);
     return 0;
 }
